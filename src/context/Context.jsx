@@ -20,11 +20,11 @@ const ContextProvider = (props) => {
 
   
 
-  const delayPara = (index, nextWord) => {
-    setTimeout(() => {
-      setResultData(prev => prev + nextWord);
-    }, 80 * index);
-  };
+  // const delayPara = (index, nextWord) => {
+  //   setTimeout(() => {
+  //     setResultData( prev + nextWord);
+  //   }, 80 * index);
+  // };
 
   const newChat = () => {
     setLoading(false);
@@ -61,7 +61,8 @@ const ContextProvider = (props) => {
     for (let i = 0; i < newResponseArray.length; i++) {
 
       const nextWord = newResponseArray[i];
-      delayPara(i, nextWord + " ")
+      // delayPara(i, nextWord + " ")
+      setResultData(  nextWord)
 
     }
 
